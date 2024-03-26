@@ -3791,6 +3791,11 @@ class Video(VideoMessages):
                             run=run,
                         )
 
+                        try:
+                            len(hc_features)
+                        except:
+                            continue
+
                         # Признаки из акустического сигнала извлечены
                         if (
                             type(hc_features) is np.ndarray
